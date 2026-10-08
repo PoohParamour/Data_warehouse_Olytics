@@ -1,0 +1,53 @@
+Table Name,Table Description,Field Name,Field Description,Field Length,Data Type,Remarks
+olist_customers_dataset,This table contains customer information.,customer_id,Key to the Orders dataset. Each Order_ID has a unique Customer ID.,32,String,Data has been hashed.
+olist_customers_dataset,This table contains customer information.,customer_unique_id,Unique Identifier (Customer ID),32,String,Data has been hashed.
+olist_customers_dataset,This table contains customer information.,customer_zip_code_prefix,First five digits of Customer zip code,5,Character,
+olist_customers_dataset,This table contains customer information.,customer_city,Customer City Name,32,Character,
+olist_customers_dataset,This table contains customer information.,customer_state,Customer State Code,2,Character,
+olist_geolocation_dataset,This tables contains Brazilian zip codes and latitude / longitude coordinates.,geolocation_zip_code_prefix,First five digits of zip code,5,Character,
+olist_geolocation_dataset,This tables contains Brazilian zip codes and latitude / longitude coordinates.,geolocation_lat,Latitude,17,Double,
+olist_geolocation_dataset,This tables contains Brazilian zip codes and latitude / longitude coordinates.,geolocation_lng,Longitude,17,Double,
+olist_geolocation_dataset,This tables contains Brazilian zip codes and latitude / longitude coordinates.,geolocation_city,City Name,32,Character,
+olist_geolocation_dataset,This tables contains Brazilian zip codes and latitude / longitude coordinates.,geolocation_state,State Code,2,Character,
+olist_order_items_dataset,"This table contains seller, product, and order information.",order_id,Unique Identifier (Order ID),32,String,Data has been hashed.
+olist_order_items_dataset,"This table contains seller, product, and order information.",order_item_id,Sequential number which identifies the number of items (based on Product ID) included in the same order.,2,Integer,
+olist_order_items_dataset,"This table contains seller, product, and order information.",product_id,Unique Identifier (Product ID),32,String,Data has been hashed.
+olist_order_items_dataset,"This table contains seller, product, and order information.",seller_id,Unique Identifier (Seller ID),32,String,Data has been hashed.
+olist_order_items_dataset,"This table contains seller, product, and order information.",shipping_limit_date,Shows the seller shipping limit timestamp for handing the order over to the logistic partner.,16,Date,
+olist_order_items_dataset,"This table contains seller, product, and order information.",price,Price of Item (based on Product ID),7,Double,
+olist_order_items_dataset,"This table contains seller, product, and order information.",freight_value,"Freight value of item - if an order has more than one item, the freight value is split between items.",7,Double,
+olist_order_payments_dataset,This table contains order payment information.,order_id,Unique Identifier (Order ID),32,String,Data has been hashed.
+olist_order_payments_dataset,This table contains order payment information.,payment_sequential,"A customer may pay an order with more than one payment method. In such instances, a sequence will be created.",2,Integer,
+olist_order_payments_dataset,This table contains order payment information.,payment_type,Method of payment.,11,Character,Pl refer to Code_List for valid payment categories.
+olist_order_payments_dataset,This table contains order payment information.,payment_installments,Number of installments for the order.,2,Integer,
+olist_order_payments_dataset,This table contains order payment information.,payment_value,Transaction value of the order.,7,Double,
+olist_order_reviews_dataset,This table contains customer reviews in Portuguese.,review_id,Unique Identifier (Review ID),32,String,Data has been hashed.
+olist_order_reviews_dataset,This table contains customer reviews in Portuguese.,order_id,Unique Identifier (Order ID),32,String,Data has been hashed.
+olist_order_reviews_dataset,This table contains customer reviews in Portuguese.,review_score,Customer Review Score on a scale of 1 to 5.,1,Integer,
+olist_order_reviews_dataset,This table contains customer reviews in Portuguese.,review_comment_title,"Comment title from the review left by the customer, in Portuguese.",35,Character,
+olist_order_reviews_dataset,This table contains customer reviews in Portuguese.,review_comment_message,"Comment message from the review left by the customer, in Portuguese.",270,Character,
+olist_order_reviews_dataset,This table contains customer reviews in Portuguese.,review_creation_date,Shows the timestamp when the satisfaction survey was sent to customer.,16,Date,
+olist_order_reviews_dataset,This table contains customer reviews in Portuguese.,review_answer_timestamp,Shows the timestamp of the satisfaction survey response.,16,Date,
+olist_orders_dataset,This is the core data table containing orders information.,order_id,Unique Identifier (Order ID),32,String,Data has been hashed.
+olist_orders_dataset,This is the core data table containing orders information.,customer_id,Key to the Orders dataset. Each Order_ID has a unique Customer ID.,32,String,Data has been hashed.
+olist_orders_dataset,This is the core data table containing orders information.,order_status,Status of Order,11,Character,Pl refer to Code_List for valid payment categories.
+olist_orders_dataset,This is the core data table containing orders information.,order_purchase_timestamp,Timestamp of Purchase,16,Date,
+olist_orders_dataset,This is the core data table containing orders information.,order_approved_at,Timestamp of Payment Approval,16,Date,
+olist_orders_dataset,This is the core data table containing orders information.,order_delivered_carrier_date,Timestamp of when the order was posted to the logistic partner.,16,Date,
+olist_orders_dataset,This is the core data table containing orders information.,order_delivered_customer_date,Timestamp of actual order delivery  to the customer.,16,Date,
+olist_orders_dataset,This is the core data table containing orders information.,order_estimated_delivery_date,Timestamp of estimated delivery date that was informed to customer at the point of purchase.,16,Date,
+olist_products_dataset,This table contains data about the products sold on Olist.,product_id,Unique Identifier (Product ID),32,String,Data has been hashed.
+olist_products_dataset,This table contains data about the products sold on Olist.,product_category_name,Product Category name in Portuguese,46,Character,
+olist_products_dataset,This table contains data about the products sold on Olist.,product_name_lenght,Number of characters in the product name.,2,Integer,
+olist_products_dataset,This table contains data about the products sold on Olist.,product_description_lenght,Number of characters in the product description.,4,Integer,
+olist_products_dataset,This table contains data about the products sold on Olist.,product_photos_qty,Number of published photos of the product.,2,Integer,
+olist_products_dataset,This table contains data about the products sold on Olist.,product_weight_g,Product weight measured in grams.,5,Integer,
+olist_products_dataset,This table contains data about the products sold on Olist.,product_length_cm,Product length measured in centimetres.,3,Integer,
+olist_products_dataset,This table contains data about the products sold on Olist.,product_height_cm,Product height measured in centimetres.,3,Integer,
+olist_products_dataset,This table contains data about the products sold on Olist.,product_width_cm,Product width measured in centimetres.,3,Integer,
+olist_sellers_dataset,This table contains data about sellers who fulfilled orders on Olist. ,seller_id,Unique Identifier (Seller ID),32,String,Data has been hashed.
+olist_sellers_dataset,This table contains data about sellers who fulfilled orders on Olist. ,seller_zip_code_prefix,First five digits of Seller zip code,5,Character,
+olist_sellers_dataset,This table contains data about sellers who fulfilled orders on Olist. ,seller_city,Seller City Name,32,Character,
+olist_sellers_dataset,This table contains data about sellers who fulfilled orders on Olist. ,seller_state,Seller State Code,2,Character,
+product_category_name_translation,This table contains the mapping of product category names from Portuguese to English,product_category_name,Product Category name in Portuguese,46,Character,
+product_category_name_translation,This table contains the mapping of product category names from Portuguese to English,product_category_name_english,Product Category name in English,39,Character,
